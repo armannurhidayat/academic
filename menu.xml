@@ -73,14 +73,14 @@
         sequence="30"/>
 
         <menuitem id="menu_academic_attendee"
-        name="Attende"
+        name="Attendee"
         parent="academic_0"
         action="action_attendee_list"
         sequence="40"/>
 
         <menuitem id="menu_academic_instructor"
         name="Instructor"
-        parent="academic_0"
+        parent="academic_1"
         action="action_instructor_list"
         sequence="50"/>
 
