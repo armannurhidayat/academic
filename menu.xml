@@ -1,0 +1,88 @@
+<odoo>
+    <data>
+        <!-- Action course -->
+        <record id="action_course_list" model="ir.actions.act_window">
+            <field name="name">Daftar Course</field>
+            <field name="res_model">academic.course</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create"> Click to create a Course </p>
+                <p>klik tombol create untuk bikin Course baru</p>
+            </field>
+        </record>
+        
+        <!-- Action Session -->
+        <record id="action_session_list" model="ir.actions.act_window">
+            <field name="name">Daftar Session</field>
+            <field name="res_model">academic.session</field>
+            <field name="view_mode">tree,form,calendar,graph,kanban</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create"> Click to create a Session </p>
+                <p>klik tombol create untuk bikin Session baru</p>
+            </field>
+        </record>
+
+        <!-- Action Attendee -->
+        <record id="action_attendee_list" model="ir.actions.act_window">
+            <field name="name">Daftar Attendee</field>
+            <field name="res_model">academic.attendee</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create"> Click to create a Attendee </p>
+                <p>klik tombol create untuk bikin Attendee baru</p>
+            </field>
+        </record>
+
+        <!-- Action Instructor -->
+        <record id="action_instructor_list" model="ir.actions.act_window">
+            <field name="name">Daftar Instructor</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="context">{"search_default_instructor":1}</field>
+            <field name="search_view_id" ref="base.view_res_partner_filter"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create"> Click to create an Instructor </p>
+                <p> klik tombol create untuk bikin Attendee baru </p>
+            </field>
+        </record>
+        
+
+        <!-- Menampilkan menu di navbar -->
+        <menuitem id="academic_0"
+        name="Academic"
+        sequence="20"/>
+
+        <!-- Menampilkan menu di kiri halaman -->
+        <menuitem id="academic_1"
+        name="Academic"
+        parent="academic_0"
+        sequence="20"/>
+
+        <menuitem id="menu_academic_course"
+        name="Course"
+        parent="academic_0"
+        action="action_course_list"
+        sequence="20"/>
+
+        <menuitem id="menu_academic_session"
+        name="Session"
+        parent="academic_0"
+        action="action_session_list"
+        sequence="30"/>
+
+        <menuitem id="menu_academic_attendee"
+        name="Attende"
+        parent="academic_0"
+        action="action_attendee_list"
+        sequence="40"/>
+
+        <menuitem id="menu_academic_instructor"
+        name="Instructor"
+        parent="academic_0"
+        action="action_instructor_list"
+        sequence="50"/>
+
+    </data>
+</odoo>
