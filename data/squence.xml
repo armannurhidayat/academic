@@ -5,9 +5,9 @@
 		<record id="session_sequence" model="ir.sequence">
 			<field name="name">Session squence</field>
 			<field name="code">academic.session</field>
-			<field name="prefix">Sess/</field>
-			<field name="suffix">/sion</field>
-			<field name="padding">3</field>
+			<field name="prefix">Sess/</field> <!-- Code unik di awal -->
+			<field name="suffix">/sion</field> <!-- Code unik di akhir -->
+			<field name="padding">3</field> <!-- Panjang code unik -->
 			<field eval="1" name="number_next"/>
             <field eval="1" name="number_increment"/>
 		</record>
